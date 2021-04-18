@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style/style.css" />
+    <title>My Form</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="form">
+        <form action="#" id="form" class="form_body">
+          <h1 class="form_title">My Form Validator</h1>
+          <div class="form_item">
+            <label for="formName" class="form_label">Name*:</label>
+            <input
+              type="text"
+              id="forName"
+              name="name"
+              class="form_input _req"
+            />
+          </div>
+          <div class="form_item">
+            <label for="forEmail" class="form_label">E-mail*:</label>
+            <input
+              type="text"
+              id="forEmail"
+              name="email"
+              class="form_input _req _email"
+            />
+          </div>
+          <div class="form_item">
+            <div class="form_label">Right-handed or Left-handed</div>
+            <div class="options">
+              <div class="options_item">
+                <input
+                  id="formRightHanded"
+                  checked
+                  type="radio"
+                  value="right"
+                  name="hand"
+                  class="options_input"
+                />
+                <label for="formRightHanded" class="options_label"
+                  ><span>Right</span></label
+                >
+              </div>
+              <div class="options_item">
+                <input
+                  id="formLeftHanded"
+                  type="radio"
+                  value="left"
+                  name="hand"
+                  class="options_input"
+                />
+                <label for="formLeftHanded" class="options_label"
+                  ><span>Left</span></label
+                >
+              </div>
+            </div>
+          </div>
+          <div class="form_item">
+            <label for="formMessage" class="form_label">Message:</label>
+            <textarea
+              name="message"
+              id="formMessage"
+              class="form_input"
+            ></textarea>
+          </div>
+          <div class="form_item">
+            <div for="formMessage" class="form_label">Age:</div>
+            <select name="age" class="select">
+              <option value="from 18 to 25" selected>Young</option>
+              <option value="from 28 to 45">Middle</option>
+              <option value="from 45">Old</option>
+            </select>
+          </div>
+          <div class="form_item">
+            <div class="form_label">Add Photo</div>
+            <div class="file">
+              <div class="file_item">
+                <input
+                  accept=".jpg, .png, .gif"
+                  id="formImage"
+                  type="file"
+                  name="image"
+                  class="file_input"
+                />
+                <div class="file_button">Choose</div>
+              </div>
+              <div id="form_preview" class="file_preview"></div>
+            </div>
+          </div>
+          <div class="form_item">
+            <div class="checkbox">
+              <input
+                id="formAgreement"
+                checked
+                type="checkbox"
+                name="agreement"
+                class="checkbox_input _req"
+              />
+              <label for="formAgreement" class="checkbox_label"
+                ><span>Agree with your <a href="">terms</a> </span></label
+              >
+            </div>
+          </div>
+          <button class="form_button" type="submit">Send ...</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="script/form.js"></script>
+  </body>
+</html>
